@@ -1,0 +1,124 @@
+
+$dark-color: #0b192e;
+$light-color: #BDC6D7;
+$accent-color: #7FCDC7;
+
+@mixin hover-transition{
+  transition: 0.3s;
+}
+
+
+
+.row{
+  --bs-gutter-x: 0;
+}
+.navbar{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+
+  .navLogo{
+    max-width: 50px;
+  }
+
+  .navImages a{
+    padding-left: 30px;
+
+    .socialIcons{
+      color: $accent-color;
+      max-width: 40px;
+      padding: 6px;
+    }
+
+    // .navLogo:hover{
+    //   animation: rotateIn;
+    //   animation-duration: 1s;
+    // }
+    .navLogo:hover{
+      transform: rotate(360deg);
+      transition: transform 1s ease-out;
+    }
+
+
+  }
+
+
+/////Menu
+
+  ul {
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 600px;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 500;
+  }
+
+
+
+
+  li {
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
+
+    a {
+      color: $light-color;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+
+      display: inline-block;
+      position: relative;
+    }
+
+    a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: $light-color;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    a:hover{
+      color: $light-color
+    }
+    a:hover:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+}
+
+
+//not sure about this
+  @media screen and (max-height: 300px) {
+    ul {
+      margin-top: 40px;
+    }
+  }
+
+/////HOVER LINE
+.hoverLine{
+  display:inline-block;
+}
+
+.hoverLine::after{
+  display:block;
+  content: '';
+  border-bottom: solid 3px $accent-color;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  padding-top: 5px;
+}
+
+.hoverLine:hover:after{
+  transform: scaleX(.7) ;
+}
+

@@ -1,0 +1,122 @@
+
+$dark-color: #0b192e;
+$accent-color: #7FCDC7;
+$light-color: #BDC6D7;
+$dim-color: #7c828c;
+
+// $dark-color: #171732;
+// $accent-color: #6C65FC;
+
+@mixin hover-transition{
+  transition: 0.3s;
+}
+
+
+.homeContainer{
+  background-color: #0B192E;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+// .backgroundSVG{
+//   fill: $dark-color;
+//   z-index: -1;
+// }
+
+
+.heroSection{
+  font-size: 16px;
+
+  background-image: url(../../assets/hero_background.png);
+  min-height: 1000px;
+  background-size: cover;
+  background-position: bottom right;
+
+  .heroContent{
+    padding: 200px;
+    // width: calc(70% + 10vh);
+    width: 70%;
+
+
+    .name{
+      color: $light-color;
+      font-size: 4rem;
+      // font-size: calc(2rem + 3vw);
+      font-weight:500;
+      animation: fadeInDown;
+
+    }
+    .title{
+      color: $accent-color;
+      font-weight: 300;
+      font-size: 2rem;
+      animation: fadeInDown;
+      // font-size: calc(.3rem + 2vw);
+
+    }
+    .description{
+      color: $light-color;
+      font-size: .8rem;
+    }
+    .buttonsRow{
+      padding-top:15px;
+
+
+      // .buttonClass{
+      //   background-color: $accent-color;
+      //   color: $dark-color;
+      //   font-weight: 600;
+      //   padding:10px;
+      //   min-width: 125px;
+      //   margin-right: 20px
+      // }
+    }
+
+    .skills{
+      padding-top:15px;
+      background: linear-gradient(to right, $dim-color 40%, $accent-color 50%, $dim-color 60%, $dim-color 100%);
+      background-clip: text;
+      color:rgba(255,255,255,0);
+      background-size: 200%;
+      animation: shine 4s infinite ;
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: .8rem;
+    }
+  }
+
+}
+
+.buttonClass {
+  border-color: $accent-color;
+  color:$dark-color;
+  box-shadow: 0 0 40px 40px $accent-color inset, 0 0 0 0 $accent-color;
+  // background-color: $accent-color; //
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all .2s ease-in-out;
+
+  font-size:.8rem;
+  font-weight:500;
+  margin-right: 15px;
+  min-width: 125px;
+  padding:10px;
+}
+
+.buttonClass:hover {
+  box-shadow: 0 0 10px 1px $accent-color;
+  color: $accent-color;
+}
+
+
+
+
+
+@keyframes shine{
+  0%{
+    background-position: 100%;
+  }
+  100%{
+    background-position: -100%;
+  }
+}
