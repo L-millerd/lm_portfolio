@@ -11,6 +11,12 @@ $dim-color: #7c828c;
   transition: 0.3s;
 }
 
+@mixin enter-side-animation{
+  animation: enterSide;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
 
 .homeContainer{
   background-color: #0B192E;
@@ -26,12 +32,13 @@ $dim-color: #7c828c;
 
 
 .heroSection{
-  font-size: 16px;
+  // font-size: 16px;
+  // background-image: url(../../assets/hero_background.png);
+  // min-height: 1000px;
+  // background-size: cover;
+  // background-position: bottom right;
 
-  background-image: url(../../assets/hero_background.png);
-  min-height: 1000px;
-  background-size: cover;
-  background-position: bottom right;
+  position: absolute;
 
   .heroContent{
     padding: 200px;
@@ -42,35 +49,23 @@ $dim-color: #7c828c;
     .name{
       color: $light-color;
       font-size: 4rem;
-      // font-size: calc(2rem + 3vw);
       font-weight:500;
-      animation: fadeInDown;
-
+      @include enter-side-animation;
     }
     .title{
       color: $accent-color;
       font-weight: 300;
       font-size: 2rem;
-      animation: fadeInDown;
-      // font-size: calc(.3rem + 2vw);
 
+      @include enter-side-animation;
+      animation-delay: 100ms;
     }
+
     .description{
       color: $light-color;
       font-size: .8rem;
-    }
-    .buttonsRow{
-      padding-top:15px;
-
-
-      // .buttonClass{
-      //   background-color: $accent-color;
-      //   color: $dark-color;
-      //   font-weight: 600;
-      //   padding:10px;
-      //   min-width: 125px;
-      //   margin-right: 20px
-      // }
+      // @include enter-side-animation;
+      // animation-delay: 200ms;
     }
 
     .skills{
@@ -79,13 +74,21 @@ $dim-color: #7c828c;
       background-clip: text;
       color:rgba(255,255,255,0);
       background-size: 200%;
-      animation: shine 4s infinite ;
+      animation: shine 4s infinite;
       text-align: justify;
       text-justify: inter-word;
       font-size: .8rem;
+
+      // @include enter-side-animation;
+      // animation-delay: 300ms;
+    }
+
+    .buttonsRow{
+      padding-top:15px;
+      // @include enter-side-animation;
+      // animation-delay: 400ms;
     }
   }
-
 }
 
 .buttonClass {
@@ -108,10 +111,7 @@ $dim-color: #7c828c;
   color: $accent-color;
 }
 
-
-
-
-
+///ANIMATIONS//
 @keyframes shine{
   0%{
     background-position: 100%;
@@ -120,3 +120,20 @@ $dim-color: #7c828c;
     background-position: -100%;
   }
 }
+
+@keyframes enterSide{
+  0%{
+    // margin-left: -500px;
+    transform: translateX(-500px);
+  }
+
+  85%{
+    transform: translateX(10px);
+  }
+
+  100%{
+    // margin-left: none;
+    transform: translateX(0px);
+  }
+}
+
