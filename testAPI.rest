@@ -1,0 +1,11 @@
+POST http://localhost:1337/api/leads
+Content-Type: application/json
+
+{
+  "data":{
+    "name": "lisa",
+    "email": "lisa@gmail.com",
+    "emailSubject": "hello!",
+    "message": "here is a test message"
+  }
+}

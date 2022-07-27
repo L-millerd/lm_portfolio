@@ -1,18 +1,77 @@
-<div class="homeContainer">
-  <div class="heroSection">
-    <!-- <svg id="svg" class="backgroundSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><g id="background"><polygon fill = "#0b192e" points="1819.28 0 0 0 0 1080 1367.16 1080 1800 0"/></g></svg> -->
-    <div class="heroContent">
-      <h1 class="name">Lisa Millerd</h1>
-      <h1 class="name2">Lisa Millerd</h1>
+<div class="contactContainer">
+  <div class="contactContent">
+    <h2>Let's Connect</h2>
 
-      <h2 class="title">Web Developer | UI/UX</h2>
-      <div class="description">I am a full-stack web developer with a passion for problem solving and creating a seamless user experience. My work is driven by a blend of technical proficiency, creativity, and an eagerness to learn new skills.</div>
-      <div class="skills">JavaScript | TypeScript | Angular | Node.js | Wordpress | HTML | CSS | SCSS | SQL | PHP | REST API | Strapi</div>
-      <div class="buttonsRow">
-        <button class="btn buttonClass">Projects</button>
-        <button class="btn buttonClass">Contact</button>
+    <section class="formContainer">
+      <form #form_="ngForm" (ngSubmit)="submit()">
+      <div class="form">
+        <div class="form-group row">
+          <div class="col">
+            <label for="inputFirstName">Full Name</label>
+            <input
+              name ="inputName"
+              #name_="ngModel"
+              [(ngModel)]="name"
+              ng-reflect-minlength="1"
+              type="text"
+              class="form-control"
+              required>
+
+              <div class="alert" role="alert" *ngIf="name_.touched && name_.invalid">Please enter your name</div>
+          </div>
+
+          <div class="col">
+            <label for="inputLastName">Email</label>
+            <input
+              name="email"
+              #email_="ngModel"
+              [(ngModel)]="email"
+
+              type="email"
+              class="form-control"
+              required>
+            <!--pattern="^[^s@]+@[^s@]+.[^s@]{2,}$"-->
+              <div class="alert" role="alert" *ngIf="email_.touched && email_.invalid">Please enter a valid email</div>
+
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col">
+            <label for="inputEmailSubject">Email Subject</label>
+            <input
+              name="inputEmailSubject"
+              #emailSubject_="ngModel"
+              [(ngModel)]="emailSubject"
+              ng-reflect-minlength="1"
+              type="text"
+              class="form-control"
+              required>
+              <div class="alert" role="alert" *ngIf="emailSubject_.touched && emailSubject_.invalid">Please enter a subject</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Message</label>
+          <textarea
+            name="inputMessage"
+            #message_="ngModel"
+            [(ngModel)]="message"
+            class="form-control"
+            required
+            ng-reflect-minlength="5"
+            rows="5"></textarea>
+            <div class="alert" role="alert" *ngIf="message_.touched && message_.invalid">Please enter a message</div>
+
+        </div>
+
+        <div class="form-group buttonRow">
+          <button class="btn buttonClass" [disabled]="form_.invalid">Send</button>
+          <div class="alert mt-3" role="alert" *ngIf="submitted">Thank you! I'll be in touch shortly.</div>
+        </div>
       </div>
-    </div>
+    </form>
+    </section>
 
   </div>
 </div>

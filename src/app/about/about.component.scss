@@ -1,0 +1,83 @@
+$dark-color: #141A29;
+$accent-color: #7fcdc7;
+$light-color: #BDC6D7;
+$dim-color: #7c828c;
+// $teal: #125e70;
+$teal: #0f505f;
+$dark-color2:#252935;
+
+
+
+
+.aboutContainer{
+  background-color: $dark-color;
+  // height: 100vh;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.aboutSection{
+  width: 90%;
+  background-color: $dark-color2;
+  border-radius: 20px 0 0 20px;
+
+  .aboutContent{
+    padding: 150px;
+    width: 90%;
+    // text-align: center;
+
+    .intro{
+      color: $light-color;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h2{
+      color: $light-color;
+      font-size: 2.5rem;
+      font-weight:500;
+    }
+
+    .title{
+      color: $accent-color;
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+
+    .description{
+      color: $light-color;
+      font-size: .8rem;
+
+    }
+  }
+}
+
+.buttonClass {
+  border: solid 2px $light-color;
+  color:$light-color;
+  // box-shadow: 0 0 40px 40px $accent-color inset, 0 0 0 0 $accent-color;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all .2s ease-in-out;
+
+  font-size:.8rem;
+  font-weight:500;
+  margin-right: 15px;
+  min-width: 125px;
+  padding:10px;
+}
+
+.buttonClass:hover {
+  box-shadow: 0 0 10px 1px $accent-color;
+  color: $accent-color;
+}
+
+////CLOUDS
+.clouds{
+  position: absolute;
+  animation: clouds 20s infinite;
+}
+
+

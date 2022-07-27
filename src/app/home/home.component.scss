@@ -1,44 +1,50 @@
-
-$dark-color: #0b192e;
-$accent-color: #7FCDC7;
+$dark-color: #141A29;
+$accent-color: #7fcdc7;
 $light-color: #BDC6D7;
 $dim-color: #7c828c;
+$teal: #125e70;
 
-// $dark-color: #171732;
-// $accent-color: #6C65FC;
+// $dark-color: #181323;
+// $accent-color: #FEF9e7;
+// $peach: #e9bab2;
+// $light-color: #BDC6D7;
+// $dim-color: #7c828c;
+
+//space
+// $dark-color: #222224;
+// $white-color: #FEF9e7;
+// $gold: #B4A36F;
+// $orange: #BA5A41;
+// $teal: #528A8A;
+// $light-color: #B9BBBA;
+// $dim-color: #7c828c;
 
 @mixin hover-transition{
   transition: 0.3s;
 }
 
-@mixin enter-side-animation{
-  animation: enterSide;
-  animation-duration: 2s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+
+////temp
+
+////temp
+.wrapper{
+  background-color: $dark-color;
+  overflow: hidden;
 }
 
 .homeContainer{
-  background-color: #0B192E;
-  height: 100vh;
+  // background-color: $dark-color;
+  height: 90vh;
   width: 100%;
   font-family: 'Poppins', sans-serif;
+  //if this is absolute, about has to be too
 }
-
-// .backgroundSVG{
-//   fill: $dark-color;
-//   z-index: -1;
-// }
 
 
 .heroSection{
-  // font-size: 16px;
-  // background-image: url(../../assets/hero_background.png);
-  // min-height: 1000px;
-  // background-size: cover;
-  // background-position: bottom right;
-
+  width: 100%;
   position: absolute;
+
 
   .heroContent{
     padding: 200px;
@@ -46,26 +52,31 @@ $dim-color: #7c828c;
     width: 70%;
 
 
+    .intro{
+      color: $light-color;
+      position: relative;
+      overflow: hidden;
+    }
     .name{
       color: $light-color;
       font-size: 4rem;
       font-weight:500;
-      @include enter-side-animation;
+      // @include enter-side-animation;
     }
+
     .title{
       color: $accent-color;
+
       font-weight: 300;
       font-size: 2rem;
 
-      @include enter-side-animation;
-      animation-delay: 100ms;
+      // @include enter-side-animation;
+      // animation-delay: 100ms;
     }
 
     .description{
       color: $light-color;
       font-size: .8rem;
-      // @include enter-side-animation;
-      // animation-delay: 200ms;
     }
 
     .skills{
@@ -78,24 +89,18 @@ $dim-color: #7c828c;
       text-align: justify;
       text-justify: inter-word;
       font-size: .8rem;
-
-      // @include enter-side-animation;
-      // animation-delay: 300ms;
     }
 
     .buttonsRow{
-      padding-top:15px;
-      // @include enter-side-animation;
-      // animation-delay: 400ms;
+      padding-top:20px;
     }
   }
 }
 
 .buttonClass {
-  border-color: $accent-color;
-  color:$dark-color;
-  box-shadow: 0 0 40px 40px $accent-color inset, 0 0 0 0 $accent-color;
-  // background-color: $accent-color; //
+  border: solid 2px $light-color;
+  color:$light-color;
+  // box-shadow: 0 0 40px 40px $accent-color inset, 0 0 0 0 $accent-color;
   -webkit-transition: all 150ms ease-in-out;
   transition: all .2s ease-in-out;
 
@@ -111,7 +116,8 @@ $dim-color: #7c828c;
   color: $accent-color;
 }
 
-///ANIMATIONS//
+
+
 @keyframes shine{
   0%{
     background-position: 100%;
@@ -121,19 +127,19 @@ $dim-color: #7c828c;
   }
 }
 
-@keyframes enterSide{
-  0%{
-    // margin-left: -500px;
-    transform: translateX(-500px);
-  }
+// @keyframes enterSide{
+//   0%{
+//     // margin-left: -500px;
+//     transform: translateX(-500px);
+//   }
 
-  85%{
-    transform: translateX(10px);
-  }
+//   85%{
+//     transform: translateX(10px);
+//   }
 
-  100%{
-    // margin-left: none;
-    transform: translateX(0px);
-  }
-}
+//   100%{
+//     // margin-left: none;
+//     transform: translateX(0px);
+//   }
+// }
 

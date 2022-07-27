@@ -1,20 +1,21 @@
 
+$dark-color: #141A29;
+
 $dark-color: #0b192e;
-$light-color: #BDC6D7;
 $accent-color: #7FCDC7;
+$light-color: #BDC6D7;
+$dim-color: #7c828c;
 
 @mixin hover-transition{
   transition: 0.3s;
 }
 
 
-
 .row{
   --bs-gutter-x: 0;
 }
 .navbar{
-  padding-top: 20px;
-  padding-bottom: 20px;
+
   font-family: 'Poppins', sans-serif;
 
   .navLogo{
@@ -121,4 +122,3 @@ $accent-color: #7FCDC7;
 .hoverLine:hover:after{
   transform: scaleX(.7) ;
 }
-

@@ -1,6 +1,96 @@
-.name{
-  font-size: calc(4rem + 4vw);
+$dark-color: #141A29;
+$accent-color: rgb(127, 205, 199);
+$light-color: #BDC6D7;
+$dim-color: #7c828c;
+$dark-teal: #24313a;
+$teal: #0f505f;
+$dark-color2:#252935;
+
+// $teal: #125e70;
+
+.contactContainer{
+  display: flex;
+  justify-content: center;
+  background-color: $dark-color2;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 40px 40px 0px 0px;
 }
-.name2{
-  font-size: 80px;
+
+
+.contactContent{
+  padding-top: 100px; ////
+  width: 70%;
 }
+
+label{
+  color: $light-color;
+  font-size: 0.8rem;
+}
+
+////////////////////////
+.formContainer{
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+///////////////////////
+
+.form{
+  // border: 2px solid $accent-color;
+  background-color: $dark-color;
+  padding: 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  border-radius: 20px;
+
+  input, textarea{
+    background: $dark-color2;
+    // background: transparent;
+    // border-radius: none !important;
+    border: none;
+    color: $light-color;
+  }
+
+  .alert{
+    font-size: 0.75rem;
+    color: $accent-color;
+    margin: 0;
+    padding: 2px;
+  }
+
+
+  input:focus, textarea:focus{
+    // border: 1px solid $accent-color;
+    box-shadow:  0 0 0 0.2rem rgba(127, 205, 199, 0.4);
+  }
+
+  //fixes autofill background color
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: $light-color !important;
+    -webkit-box-shadow: 0 0 0px 1000px $dark-color2 inset;
+  }
+}
+
+
+.buttonRow{
+  padding-top: 1rem;
+}
+
+.buttonClass {
+  background-color: $light-color;
+  // color:$dark-color;
+
+
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all .2s ease-in-out;
+
+  width: 100%;
+  font-size:.8rem;
+  font-weight:500;
+  padding:10px 25px 10px 25px;
+}
+

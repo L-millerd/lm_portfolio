@@ -1,8 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+$dark-color: #0b192e;
+
+$dark-color: #0b192e;
+$accent-color: #7FCDC7;
+$light-color: #BDC6D7;
+$dim-color: #7c828c;
+
+
 html{
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-size: calc(15px + 0.390625vw);
   //font-sie: 20px;
-  font-weight: 300px;
+  // font-weight: 900;
+  background-color: $dark-color;
+
+}
+
+
+h1{
+  font-size: 4rem;
+  font-weight:500;
+}
+
+h2{
+  color: $light-color;
+  font-size: 2.5rem;
+  font-weight:500;
+}
+
+p{
+  font-size: .9rem;
+
 }

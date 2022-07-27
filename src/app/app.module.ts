@@ -6,6 +6,14 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { LeftNavComponent } from './left-nav/left-nav.component';
+import { gsap } from 'gsap';
+import { AboutComponent } from './about/about.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -13,12 +21,17 @@ import { ContactComponent } from './contact/contact.component';
     NavComponent,
     HomeComponent,
     ContactComponent,
+    ProjectsComponent,
+    LeftNavComponent,
+    AboutComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
