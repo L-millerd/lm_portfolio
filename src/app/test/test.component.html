@@ -6,9 +6,9 @@
     <h2>Projects</h2>
     <div class="buttonsRow"></div>
 
-    <section class="projectList" >
+    <section class="projectList" ><!--tosection-->
 
-      <div class="projectCardWrapper" *ngFor="let project of projects;" >
+      <div class="projectCardWrapper" #projectWrapper *ngFor="let project of projects;" >
         <div class="projectCard row">
           <div class="cardInfo col-8">
             <h3>{{project.attributes.Title}}</h3>
@@ -25,7 +25,6 @@
           </div>
 <!--needs to be updated with cloudinary-->
           <div class="cardImage col-4">
-            <img [src]="project.attributes.Image.data.attributes.url">
           </div>
 <!--needs to be updated with cloudinary-->
 
@@ -97,7 +96,7 @@
 
         </div>
       </div>
-    </section>
+    </section><!--tosection-->
 
 
   </div>

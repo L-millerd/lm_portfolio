@@ -13,6 +13,8 @@ import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { TestComponent } from './test/test.component';
+import { SingleProjectComponent } from './single-project/single-project.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import {HttpClientModule} from '@angular/common/http';
     ProjectsComponent,
     LeftNavComponent,
     AboutComponent,
+    TestComponent,
+    SingleProjectComponent,
 
   ],
   imports: [

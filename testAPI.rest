@@ -1,4 +1,7 @@
-POST http://localhost:1337/api/leads
+@localurl = http://localhost:1337
+
+
+POST {{localurl}}/api/leads
 Content-Type: application/json
 
 {
@@ -9,3 +12,7 @@ Content-Type: application/json
     "message": "here is a test message"
   }
 }
+
+###
+GET {{localurl}}/api/projects/?populate=deep,2
+Content-Type: application/json
