@@ -1,25 +1,34 @@
 
-<div class="wrapper">
-    <nav-component class="nav-app"></nav-component>
+<nav-component id="home"></nav-component>
 
-    <div class="homeContainer">
+<div class="wrapper">
+
+  <div class="vertLine"></div>
+
+    <div class="homeContainer" >
       <section class="heroSection">
         <div class="heroContent">
           <!-- <p class="intro"><span>Hi! my name is...</span></p> -->
           <h1 class="name">Lisa Millerd</h1>
           <h2 class="title">Full Stack Developer</h2>
           <!-- <div class="description">I am a full-stack web developer with a passion for problem solving and creating a seamless user experience. My work is driven by a blend of technical proficiency, creativity, and an eagerness to learn new skills.</div> -->
-          <div class="skills">JavaScript | TypeScript | Angular | Node.js | Wordpress | HTML | CSS | SCSS | SQL | PHP | REST API | Strapi</div>
+          <div class="skills">JavaScript | TypeScript | Angular | Node.js | Wordpress | HTML | CSS | SCSS | SQL | PHP | REST API | Headless CMS | Cloud Hosting | GSAP | NativeScript</div>
           <div class="buttonsRow">
             <button class="btn buttonClass" (click)="scrollProjects()">Projects</button>
-            <button class="btn buttonClass">Contact</button>
+            <button class="btn buttonClass" (click)="scrollContact()">Contact</button>
           </div>
         </div>
       </section>
     </div>
 
+    <div class="appContainer">
+      <div class="number" id="one"><i (click)="scrollHome()"class="fa-solid fa-caret-up arrows"></i>01.<i (click)="scrollProjects()" class="fa-solid fa-caret-down arrows"></i></div>
+      <app-about class="app" ></app-about>
+      <div class="number" id="two"><i (click)="scrollAbout()"class="fa-solid fa-caret-up arrows"></i>02.<i (click)="scrollContact()" class="fa-solid fa-caret-down arrows"></i></div>
+      <app-projects class="app" ></app-projects>
+      <div class="number" id="three">
+        <i (click)="scrollProjects()"class="fa-solid fa-caret-up arrows"></i>03.</div>
+      <app-contact class="app" id="app-contact"></app-contact>
+    </div>
 
-  <app-about class="app" id="app-about" ></app-about>
-  <app-projects class="app" id="app-projects"></app-projects>
-  <app-contact class="app" id="app-contact"></app-contact>
 </div>

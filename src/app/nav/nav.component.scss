@@ -1,7 +1,5 @@
 
 $dark-color: #141A29;
-
-$dark-color: #0b192e;
 $accent-color: #7FCDC7;
 $light-color: #BDC6D7;
 $dim-color: #7c828c;
@@ -14,9 +12,12 @@ $dim-color: #7c828c;
 .row{
   --bs-gutter-x: 0;
 }
-.navbar{
 
+.navbar{
   font-family: 'Poppins', sans-serif;
+  background-color: $dark-color;
+  // -webkit-box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
+  // box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
 
   .navLogo{
     max-width: 50px;

@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
 
   constructor() { }
 
-  aboutSection = '.aboutSection';
+  about = '.aboutContainer';
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger, Draggable);
@@ -19,9 +19,9 @@ export class AboutComponent implements OnInit {
   }
 
   initScrollTriggers(){
-    gsap.from(this.aboutSection, {
-      scrollTrigger: {trigger: this.aboutSection, start: 'top center'},
-      x:1000,
+    gsap.from(this.about, {
+      scrollTrigger: {trigger: this.about, start: '-150 center'},
+      x:500,
       duration: 2,
     })
   }

@@ -12,13 +12,17 @@ export class NavComponent implements OnInit {
 
   constructor(private vs: ViewportScroller) { }
 
+  scrollAbout(){
+    this.vs.scrollToAnchor('one')
+  }
   scrollProjects(){
-    this.vs.scrollToAnchor('app-projects');
+    this.vs.scrollToAnchor('two');
+  }
+  scrollContact(){
+    this.vs.scrollToAnchor('three');
   }
 
-  scrollAbout(){
-    this.vs.scrollToAnchor('app-about')
-  }
+
   ngOnInit(): void {
     gsap.from(".nav-item", {
       duration: 0.75,

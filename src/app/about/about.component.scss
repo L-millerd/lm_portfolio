@@ -6,7 +6,10 @@ $dim-color: #7c828c;
 $teal: #0f505f;
 $dark-color2:#252935;
 
-
+@mixin sectionShadow{
+  -webkit-box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
+}
 
 
 .aboutContainer{
@@ -16,6 +19,7 @@ $dark-color2:#252935;
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: flex-end;
+
 }
 
 
@@ -23,6 +27,7 @@ $dark-color2:#252935;
   width: 90%;
   background-color: $dark-color2;
   border-radius: 20px 0 0 20px;
+  @include sectionShadow();
 
   .aboutContent{
     padding: 150px;
@@ -35,11 +40,11 @@ $dark-color2:#252935;
       overflow: hidden;
     }
 
-    h2{
-      color: $light-color;
-      font-size: 2.5rem;
-      font-weight:500;
-    }
+    // h2{
+    //   color: $light-color;
+    //   font-size: 2.5rem;
+    //   font-weight:500;
+    // }
 
     .title{
       color: $accent-color;

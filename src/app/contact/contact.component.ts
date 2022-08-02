@@ -21,6 +21,9 @@ export class ContactComponent implements OnInit {
   constructor(private cs: CommonService) {
    }
 
+  contactSection = '.contactContainer';
+  contactWrapper = '.contactWrapper';
+
   submit(){
     let messageBody={
       data: {
@@ -36,8 +39,18 @@ export class ContactComponent implements OnInit {
     this.submitted=true;
   }
 
-  ngOnInit(): void {
+  initScrollTriggers(){
+    gsap.from(this.contactSection, {
+      scrollTrigger: {trigger: this.contactWrapper, start: '-150 center'},
+      y:500,
+      duration: 2,
+    })
+  }
 
+
+  ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger, Draggable);
+    this.initScrollTriggers();
   }
 
 

@@ -8,18 +8,25 @@ $dark-color2:#252935;
 
 // $teal: #125e70;
 
+@mixin sectionShadow{
+  -webkit-box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
+}
+
 .contactContainer{
   display: flex;
   justify-content: center;
-  background-color: $dark-color2;
   font-family: 'Poppins', sans-serif;
-  border-radius: 40px 40px 0px 0px;
+
 }
 
 
 .contactContent{
-  padding-top: 100px; ////
-  width: 70%;
+  padding: 150px 200px 150px 200px; ////change for responsive
+  width: 90%;
+  border-radius: 40px 40px 0px 0px;
+  background-color: $dark-color2;
+  @include sectionShadow();
 }
 
 label{
@@ -62,7 +69,8 @@ label{
 
   input:focus, textarea:focus{
     // border: 1px solid $accent-color;
-    box-shadow:  0 0 0 0.2rem rgba(127, 205, 199, 0.4);
+    // box-shadow:  0 0 0 0.2rem rgba(127, 205, 199, 0.4);
+    box-shadow:  0 0 0 0.1rem $dim-color;
   }
 
   //fixes autofill background color
@@ -75,6 +83,7 @@ label{
   }
 }
 
+///buttons
 
 .buttonRow{
   padding-top: 1rem;
@@ -82,7 +91,10 @@ label{
 
 .buttonClass {
   background-color: $light-color;
-  // color:$dark-color;
+  border: 2px solid $light-color;
+  color: $dark-color;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all .2s ease-in-out;
 
 
   -webkit-transition: all 150ms ease-in-out;
@@ -92,5 +104,15 @@ label{
   font-size:.8rem;
   font-weight:500;
   padding:10px 25px 10px 25px;
+}
+
+.buttonClass:hover {
+  background-color: rgb(189, 198, 215, .2);
+  color: $light-color;
+  transform: scale(1.03);
+}
+
+.icon{
+  color: $accent-color;
 }
 

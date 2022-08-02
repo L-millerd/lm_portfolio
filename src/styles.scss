@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 $dark-color: #0b192e;
-
-$dark-color: #0b192e;
 $accent-color: #7FCDC7;
 $light-color: #BDC6D7;
 $dim-color: #7c828c;
@@ -24,13 +22,24 @@ h1{
   font-weight:500;
 }
 
+
+p{
+  font-size: .9rem;
+}
+
 h2{
   color: $light-color;
   font-size: 2.5rem;
   font-weight:500;
 }
 
-p{
-  font-size: .9rem;
+///headings
 
+hr{
+  color: $light-color;
 }
+
+.fa-solid{
+  color: $dim-color;
+}
+

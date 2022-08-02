@@ -1,49 +1,37 @@
 $dark-color: #141A29;
-$accent-color: #7fcdc7;
+$accent-color: rgb(127, 205, 199);
+$dim-accent: #497e7a;
 $light-color: #BDC6D7;
 $dim-color: #7c828c;
 $teal: #125e70;
+$dark-color2:#252935;
 
-// $dark-color: #181323;
-// $accent-color: #FEF9e7;
-// $peach: #e9bab2;
-// $light-color: #BDC6D7;
-// $dim-color: #7c828c;
-
-//space
-// $dark-color: #222224;
-// $white-color: #FEF9e7;
-// $gold: #B4A36F;
-// $orange: #BA5A41;
-// $teal: #528A8A;
-// $light-color: #B9BBBA;
-// $dim-color: #7c828c;
 
 @mixin hover-transition{
   transition: 0.3s;
 }
 
 
-////temp
 
-////temp
 .wrapper{
   background-color: $dark-color;
   overflow: hidden;
+  background-size: cover;
+  position: absolute;
+
 }
 
 .homeContainer{
-  // background-color: $dark-color;
-  height: 90vh;
+  height: 90vh; ///This needs work
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  //if this is absolute, about has to be too
 }
 
 
 .heroSection{
   width: 100%;
   position: absolute;
+  z-index: 1;
 
 
   .heroContent{
@@ -97,25 +85,63 @@ $teal: #125e70;
   }
 }
 
-.buttonClass {
-  border: solid 2px $light-color;
-  color:$light-color;
-  // box-shadow: 0 0 40px 40px $accent-color inset, 0 0 0 0 $accent-color;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all .2s ease-in-out;
+.appContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 
+/////Vert Navigation
+
+.number{
+  background-color: $dark-color;
+  color: $accent-color;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 10%; // for overlap
+}
+
+.vertLine{
+  width: 2rem;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  border-right: 1px solid $dim-accent;
+}
+
+.arrows{
+  color: #497e7a;
+  padding-left: 0.6rem;
+  font-size: 1.2rem;
+}
+
+/////buttons
+
+.buttonClass {
   font-size:.8rem;
   font-weight:500;
   margin-right: 15px;
   min-width: 125px;
   padding:10px;
+
+  background-color: $accent-color;
+  color: $dark-color;
+  border: 2px solid $accent-color;
+
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .buttonClass:hover {
-  box-shadow: 0 0 10px 1px $accent-color;
+   background-color: rgb(127, 205, 199, .2);
   color: $accent-color;
+  transform: scale(1.03);
 }
-
 
 
 @keyframes shine{
@@ -126,20 +152,4 @@ $teal: #125e70;
     background-position: -100%;
   }
 }
-
-// @keyframes enterSide{
-//   0%{
-//     // margin-left: -500px;
-//     transform: translateX(-500px);
-//   }
-
-//   85%{
-//     transform: translateX(10px);
-//   }
-
-//   100%{
-//     // margin-left: none;
-//     transform: translateX(0px);
-//   }
-// }
 

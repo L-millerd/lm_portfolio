@@ -1,9 +1,9 @@
 
 
 <div class="projectsContainer">
-
   <div class="projectsContent">
-    <h2>Projects</h2>
+    <h2><i class="fa-solid fa-gear"></i> Projects</h2>
+    <hr>
     <div class="buttonsRow"></div>
 
     <section class="projectList" >
@@ -19,14 +19,14 @@
 
             <p>{{project.attributes.Summary}}</p>
             <div class="linksRow">
-              <a [href]="project.attributes.WebLink"><button class="btn">Demo</button></a>
+              <a [href]="project.attributes.WebLink"><button class="btn buttonClass">View</button></a>
               <a [href]="project.attributes.GitLink"><i class="socialIcon fa-xl fa-brands fa-github"></i></a>
             </div>
           </div>
 <!--needs to be updated with cloudinary-->
-          <div class="cardImage col-4">
-            <img [src]="project.attributes.Image.data.attributes.url">
-          </div>
+          <!-- <div class="cardImage col-4">
+            <img [src]="server + project.attributes.Image.data.attributes.url">
+          </div> -->
 <!--needs to be updated with cloudinary-->
 
         </div>
@@ -43,7 +43,7 @@
             </ul>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             <div class="linksRow">
-              <button class="btn">Demo</button>
+              <button class="btn buttonClass">View</button>
               <a href="#"><i class="socialIcon fa-xl fa-brands fa-github"></i></a>
             </div>
           </div>
@@ -65,7 +65,7 @@
             </ul>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             <div class="linksRow">
-              <button class="btn">Demo</button>
+              <button class="btn buttonClass">View</button>
               <a href="#"><i class="socialIcon fa-xl fa-brands fa-github"></i></a>
             </div>
           </div>
@@ -87,7 +87,7 @@
             </ul>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             <div class="linksRow">
-              <button class="btn">Demo</button>
+              <button class="btn buttonClass">View</button>
               <a href="#"><i class="socialIcon fa-xl fa-brands fa-github"></i></a>
             </div>
           </div>

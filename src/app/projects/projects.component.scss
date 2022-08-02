@@ -2,7 +2,7 @@
 
 $dark-color: #141A29;
 $accent-color: #7fcdc7;
-$light-color: #BDC6D7;
+$light-color: rgb(189, 198, 215);
 $dim-color: #7c828c;
 $teal: #125e70;
 $dark-teal: #24313a;
@@ -11,10 +11,13 @@ $dark-color2:#252935;
 
 // accent rgb(127, 205, 199);
 
-@mixin hoverGlow{
-  // box-shadow: 0 0 50px -9px rgba(127, 205, 199, 5);
-  // border: 1px solid $dim-color;
-  transform: scale(1.01)
+@mixin sectionShadow{
+  -webkit-box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
+}
+
+@mixin hoverGrow{
+  transform: scale(1.03)
 }
 
 
@@ -22,16 +25,15 @@ $dark-color2:#252935;
   background-color: $dark-color;
   display:flex;
   justify-content: center;
-///
-  padding-bottom: 150px;
-////
+
+  // padding-bottom: 150px;
+
+
   .projectsContent{
     width: 70%;
-    padding-top: 100px;
+    // padding-top: 200px;
 
-    h1{
-      color: $light-color;
-    }
+
 
     .projectList{
       padding-top: 50px;
@@ -48,6 +50,7 @@ $dark-color2:#252935;
           padding: 75px;
           -webkit-transition: all 150ms ease-in-out;
           transition: all .3s ease-in-out;
+          @include sectionShadow();
 
 
 
@@ -88,16 +91,12 @@ $dark-color2:#252935;
               align-items: center;
               gap: 1rem;
 
-              button{
-                font-size: .8rem;
-                background-color: $light-color;
-                color: $dark-color;
-                font-weight: 500;
-              }
-
-              .socialIcon{
-                // width: 30%;
-              }
+              // button{
+              //   font-size: .8rem;
+              //   background-color: $light-color;
+              //   color: $dark-color;
+              //   font-weight: 500;
+              // }
 
               .fa-brands{
                 color: $light-color;
@@ -116,12 +115,35 @@ $dark-color2:#252935;
 
 
       .projectCard:hover{
-        @include hoverGlow();
+        @include hoverGrow();
 
       }
     }
   }
 
 }
+
+///buttons
+
+.buttonClass {
+  background-color: $light-color;
+  border: 2px solid $light-color;
+  color: $dark-color;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all .2s ease-in-out;
+
+  font-size:.8rem;
+  font-weight:500;
+  margin-right: 15px;
+  min-width: 125px;
+  padding:10px;
+}
+
+.buttonClass:hover {
+  background-color: rgb(189, 198, 215, .2);
+  color: $light-color;
+  transform: scale(1.03);
+}
+
 
 }
