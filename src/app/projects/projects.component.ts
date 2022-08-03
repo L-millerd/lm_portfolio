@@ -2,8 +2,7 @@ import { Component, OnInit, ViewChildren } from '@angular/core';
 import { gsap } from 'gsap';
 import { CommonService } from '../services/common.service';
 import { environment } from 'src/environments/environment';
-import { Projects } from '../interfaces/interface';
-import { QueryList } from '@angular/core';
+
 
 @Component({
   selector: 'app-projects',
@@ -21,7 +20,7 @@ export class ProjectsComponent implements OnInit {
   // private projectCards: QueryList<'projectWrapper'>;
 
   ngOnInit(): void {
-    gsap.registerPlugin(ScrollTrigger, Draggable);
+    gsap.registerPlugin(ScrollTrigger);
 
     this.cs.getProjects().subscribe( res =>{
       this.projects = res.data;

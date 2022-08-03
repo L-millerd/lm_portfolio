@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
   about = '.aboutContainer';
 
   ngOnInit(): void {
-    gsap.registerPlugin(ScrollTrigger, Draggable);
+    gsap.registerPlugin(ScrollTrigger);
     this.initScrollTriggers();
   }
 
