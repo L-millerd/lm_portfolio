@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
 
   tl= gsap.timeline();
 
-
   //Arrow & Button Scrolls
 
   scrollHome(){

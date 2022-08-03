@@ -1,0 +1,23 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #faf6ea;
+}
+
+.navbar{
+  min-height:75px;
+  font-weight:700;
+  font-size:20px;
+
+  .nav-link{
+      padding-left: 50px;
+  }
+
+  .logo{
+      width:100px;
+      padding: 8px;
+  }
+
+
+}

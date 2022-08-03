@@ -23,19 +23,14 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger, Draggable);
 
-    this.initScrollTriggers();
-
     this.cs.getProjects().subscribe( res =>{
-      // console.log(res);
       this.projects = res.data;
     })
 
   }
 
   ngAfterViewInit(){
-    // this.projectCards.changes.subscribe( res=>{
-    //   console.log("observable", res);
-    // })
+    this.initScrollTriggers();
   }
 
   initScrollTriggers() {
@@ -44,9 +39,7 @@ export class ProjectsComponent implements OnInit {
         scrollTrigger:{
           trigger: card,
           // start: "top center",
-          //add restart none none none to replay
           toggleActions: "restart none none none",
-          // markers: true,
         }
       });
       scrollBox.from(card, {
@@ -54,7 +47,6 @@ export class ProjectsComponent implements OnInit {
         opacity: 0,
         x:-200,
         stagger: 0.5,
-        // ease: "back",
       })
     })
   }

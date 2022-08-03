@@ -1,0 +1,110 @@
+
+<div class="homeWrapper">
+
+<!--............NavBar..........-->
+<app-cakery-nav></app-cakery-nav>
+
+<!--...........banner..............-->
+
+<!-- <div class="banner"><img src="../../../assets/cakery-assets/cakelife_banner.png"></div> -->
+<div class="bannerWrapper row">
+    <div class="bannerLeftBox col-sm-12 col-md-6 col-xl-7">
+
+    </div>
+    <div class="bannerTextBox col-sm-12 col-md-6 col-xl-5">
+        <div class="bannerText animate__animated animate__fadeInRight">THE <br> CAKE <br> LIFE</div>
+        <div class="bannerLine animate__animated animate__fadeInRight"></div>
+    </div>
+
+</div>
+
+<!--.................body.................-->
+
+<div class="contentWrapper">
+
+  <div class="contentSection">
+    <h1>Products</h1>
+    <hr class="rollout hr1">
+    <div class="productsRow row">
+      <div class="productCol col-md-3" *ngFor="let product of cakery_products | slice:0:4">
+        <img [src]="product.image" alt="" class="imgClass">
+        <div class="name">{{product.name}}</div>
+        <div class="price">{{product.price}}</div>
+      </div>
+    </div>
+
+    <a  href="projects/the-cakery/products"><button class="reg-button">More</button></a>
+  </div>
+
+
+      <div class="contentSection">
+        <div class="contentRow row">
+          <div class="contentImage col-sm-12 col-md-6 col-lg-6">
+            <img class = "sideImage" src = "../../../assets/cakery-assets/blueDonut.png">
+          </div>
+
+          <div class="contentText col-sm-12 col-md-6 col-lg-6">
+            <h1>About The Cakery</h1>
+            <hr class="rollout hr2">
+            <p>
+              Rutrum tellus pellentesque eu tincidunt. Imperdiet dui accumsan sit
+              amet nulla facilisi morbi tempus iaculis.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur.
+            </p>
+            <p>
+              In dictum non consectetur
+              a erat nam. Sed felis eget velit aliquet sagittis id. Nisl tincidunt eget nullam non nisi est sit amet facilisis. Pharetra convallis posuere morbi leo urna.
+            </p>
+
+            <a  href=""><button class="reg-button">More</button></a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="contentSection">
+
+        <div class="contentRow rowReverse row">
+
+          <div class="contentText col-sm-12 col-md-6 col-lg-6">
+            <h1>In The News</h1>
+            <hr class="rollout hr2">
+            <p>
+              Rutrum tellus pellentesque eu tincidunt. Imperdiet dui accumsan sit
+              amet nulla facilisi morbi tempus iaculis.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur.
+            </p>
+            <p>
+              In dictum non consectetur
+              a erat nam. Sed felis eget velit aliquet sagittis id. Nisl tincidunt eget nullam non nisi est sit amet facilisis. Pharetra convallis posuere morbi leo urna.
+            </p>
+
+            <a href=""><button class="reg-button">More</button></a>
+          </div>
+
+          <div class="contentImage col-sm-12 col-md-6 col-lg-6">
+            <img class = "sideImage" src = "../../../assets/cakery-assets/halfCircles.png">
+          </div>
+        </div>
+      </div>
+
+  <div class="contentSection">
+    <h1><img style="padding-right:15px;" src="../../../assets/cakery-assets/ig_black.png">Insta</h1>
+    <hr class="rollout hr1">
+
+    <div class="instaOutput" >
+      <div class='instaRow productsRow row' >
+        <div class="productCol col-md-3" *ngFor="let product of insta_products | slice:0:4">
+          <img class ="imgClass" [src]="product.image">
+          <div class="date">{{product.date}}</div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <a  href=""><button class="reg-button">Follow</button></a>
+
+  </div>
+
+  <app-cakery-footer></app-cakery-footer>
