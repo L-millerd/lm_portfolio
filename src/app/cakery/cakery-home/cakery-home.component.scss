@@ -1,3 +1,4 @@
+@import '../forward.scss';
 // $red: #a41a1a;
 // $blue: #0069ad;
 // $bg-color: #faf6ea;
@@ -13,7 +14,7 @@
 //     opacity: 1;
 // }
 
-// //////////////ALL//////////////
+//////////////ALL//////////////
 // h1{
 //     font-weight:900;
 //     font-size: 2.5rem
@@ -42,154 +43,148 @@
 //     color: #726f68;
 // }
 
-// //////////
+//////////
 
-// .homeWrapper{
-//   padding: 0;
-//   margin: 0;
-//   font-family: 'Roboto', sans-serif;
-//   background-color: #faf6ea;
-//   max-width: 100%
-// }
+.homeWrapper{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #faf6ea;
+  max-width: 100%
+}
 
-// .bannerWrapper{
-//   background-color: $blue;
-//   max-width: 100%;
+.bannerWrapper{
+  background-color: $blue;
+  max-width: 100%;
 
-//   .bannerLeftBox{
-//       background-image: url('../../../assets/cakery-assets/index_banner.jpg');
-//       background-size:cover;
-//       border-top-right-radius:500px;
-//       border-bottom-right-radius:500px;
-//       //margin:30px 0px 20px 0px;
-//       margin-top:20px;
-//       margin-bottom:20px;
-//       min-height:50vh;
-
-// ///removing cols
-//       // width: 60%;
-
-
-//   }
-
-//   .bannerTextBox{
-//       background-color:$bg-color;
-//       text-align: right;
-//       display:flex;
-//       flex-direction: column;
-//       align-items: flex-end;
-//       justify-content: flex-end;
-//       // flex-grow: 1;
-//       padding: 50px 100px 50px 100px;
-
-// ///removing cols
-//       // width: 40%;
-
-
-//       .bannerText{
-//           font-weight: 900;
-//           //font-size: 125px;
-//           line-height: 110%;
-//           padding-bottom:20px
-//       }
-
-//       .bannerLine{
-
-//           background-color: $red;
-
-//       }
-//   }
-// }
-
-
-// ////////////////Home
-
-
-// .contentWrapper{
-//     background-color: $bg-color;
-//     max-width: 100%;
-
-//     .contentSection{
-//         //padding: 150px 150px 0px 150px;
-//         background-color: $bg-color;
-//         max-width: 1500px;
-
-//         .hr1{
-//             @include border-style;
-//             margin-left:0;
-//         }
-
-//         .hr2{
-//             @include border-style;
-//             margin-right:0;  //why doesn't this work?
-//         }
+  .bannerLeftBox{
+      background-image: url('../../../assets/cakery-assets/index_banner.jpg');
+      background-size:cover;
+      border-top-right-radius:500px;
+      border-bottom-right-radius:500px;
+      margin-top:20px;
+      margin-bottom:20px;
+      min-height:50vh;
 
 
 
-//         .rollout{
-//             -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
-//             transition: width 1s  ease-out;
-//             width : 0%;
-//             text-align: right;
-//         }
+  }
 
-//         .grow{
-//             width:100%;
-//           }
+  .bannerTextBox{
+      background-color:$bg-color;
+      text-align: right;
+      display:flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 50px 100px 50px 100px;
 
-//         .alignRight{
-//             text-align: right;
-//         }
 
-//         .productsRow{
-//             .productCol{
-//                 padding-bottom: 20px;
-//                 .imgClass{
-//                     //max-width: 205px;
-//                     max-width: 100%;
-//                 }
-//                 .name{
-//                     font-size: 18px;
-//                     font-weight: 600;
-//                 }
 
-//                 .price{
-//                     color: $blue;
-//                     font-weight: 600;
-//                 }
 
-//                 .date{
-//                     color: #6c757d;
-//                     padding-top: 5px;
-//                 }
-//             }
-//         }
-//     }
+      .bannerText{
+          font-weight: 900;
+          line-height: 110%;
+          padding-bottom:20px
+      }
 
-//     .contentRow{
-//         margin-top: 20px;
-//         align-items: center;
+      .bannerLine{
 
-//         .contentImage{
-//             max-width: 100%;
-//             text-align: center;
+          background-color: $red;
 
-//             .sideImage{
-//                 max-width: 100%;
-//             }
+      }
+  }
+}
 
-//         }
 
-//         .contentText{
+////////////////Home
 
-//         }
-//     }
 
-// }
+.contentWrapper{
+    background-color: $bg-color;
+    max-width: 100%;
 
-// //////////media queries////////
+    .contentSection{
+        //padding: 150px 150px 0px 150px;
+        background-color: $bg-color;
+        max-width: 1500px;
 
-// ///CELLPHONE
+        .hr1{
+            @include border-style;
+            margin-left:0;
+        }
+
+        .hr2{
+            @include border-style;
+            margin-right:0;  //why doesn't this work?
+        }
+
+
+
+        .rollout{
+            -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+            transition: width 1s  ease-out;
+            width : 0%;
+            text-align: right;
+        }
+
+        .grow{
+            width:100%;
+          }
+
+        .alignRight{
+            text-align: right;
+        }
+
+        .productsRow{
+            .productCol{
+                padding-bottom: 20px;
+                .imgClass{
+                    //max-width: 205px;
+                    max-width: 100%;
+                }
+                .name{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .price{
+                    color: $blue;
+                    font-weight: 600;
+                }
+
+                .date{
+                    color: #6c757d;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+
+    .contentRow{
+        margin-top: 20px;
+        align-items: center;
+
+        .contentImage{
+            max-width: 100%;
+            text-align: center;
+
+            .sideImage{
+                max-width: 100%;
+            }
+
+        }
+
+        .contentText{
+
+        }
+    }
+
+}
+
+//////////media queries////////
+
+///CELLPHONE
 // @media screen and (max-width:500px){
 //     .bannerText{
 //         font-size: 100px;

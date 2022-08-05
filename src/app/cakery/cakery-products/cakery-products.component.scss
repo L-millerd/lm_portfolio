@@ -1,3 +1,4 @@
+@import '../forward.scss';
 // $red: #a41a1a;
 // $blue: #0069ad;
 // $bg-color: #faf6ea;
@@ -41,164 +42,162 @@
 // }
 
 
-// /////////////BANNER
+/////////////BANNER
 
-// .productsWrapper{
-//   padding: 0;
-//   margin: 0;
-//   font-family: 'Roboto', sans-serif;
-//   background-color: #faf6ea;
-//   max-width: 100%
-// }
+.productsWrapper{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #faf6ea;
+  max-width: 100%
+}
 
-// .bannerWrapper{
-//     background-color: $yellow;
+.bannerWrapper{
+    background-color: $yellow;
 
-//     .bannerLeftBox{
-//         background-image: url('../../../assets/cakery-assets/products_banner.jpg');
-//         background-size:cover;
-//         border-top-right-radius:500px;
-//         border-bottom-right-radius:500px;
-//         background-attachment: bottom center;
-//         //margin:30px 0px 20px 0px;
-//         margin-top:20px;
-//         margin-bottom:20px;
-//         min-height:50vh;
-//     }
+    .bannerLeftBox{
+        background-image: url('../../../assets/cakery-assets/products_banner.jpg');
+        background-size:cover;
+        border-top-right-radius:500px;
+        border-bottom-right-radius:500px;
+        background-attachment: bottom center;
+        //margin:30px 0px 20px 0px;
+        margin-top:20px;
+        margin-bottom:20px;
+        min-height:50vh;
+    }
 
-//     .bannerTextBox{
-//         background-color:$bg-color;
-//         text-align: right;
-//         display:flex;
-//         flex-direction: column;
-//         align-items: flex-end;
-//         justify-content: flex-end;
-//        // padding: 50px 100px 50px 100px;
-
-
-
-
-//         .bannerText{
-//             font-weight: 900;
-//             //font-size: 125px;
-//             line-height: 110%;
-//             padding-bottom:20px
-//         }
-
-//         .bannerLine{
-
-//             background-color: $red;
-
-//         }
-//     }
-// }
-
-
-// //////////////CONTENT//////////////
-
-
-// .contentWrapper{
-//     background-color: $bg-color;
-//     display: flex;
-//     justify-content: center;
-
-
-//     .contentSection{
-//         padding: 150px 150px 0px 150px;
-//         background-color: $bg-color;
-//         max-width: 1500px;
-
-//         .headContainer{
-//             align-items: flex-end;
-
-//                 .filtersList{
-//                     display: flex;
-//                     justify-content:flex-end;
-//                     list-style-type: none;
-
-//                     .list{
-//                         padding: 5px 10px 5px 10px;
-//                         font-weight: 900;
-
-//                     }
-
-//                     .list:hover{
-//                         background-color:black;
-//                         color: $bg-color;
-//                     }
-//                 }
-
-//         }
-
-//         .hr1{
-//             @include border-style;
-//             margin-left:0;
-//         }
-
-//         .hr2{
-//             @include border-style;
-//             margin-right:0;  //why doesn't this work?
-//         }
+    .bannerTextBox{
+        background-color:$bg-color;
+        text-align: right;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+       // padding: 50px 100px 50px 100px;
 
 
 
-//         .rollout{
-//             -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
-//             transition: width 1s  ease-out;
-//             width : 0%;
-//             text-align: right;
-//         }
 
-//         .grow{
-//             width:100%;
-//           }
+        .bannerText{
+            font-weight: 900;
+            //font-size: 125px;
+            line-height: 110%;
+            padding-bottom:20px
+        }
 
-//         .alignRight{
-//             text-align: right;
-//         }
+        .bannerLine{
 
-//         .productsRow{
+            background-color: $red;
+
+        }
+    }
+}
 
 
-//             .productCol{
-//                 padding-bottom: 60px;
-//                 .imgClass{
-//                     //max-width: 205px;
-//                     max-width: 100%;
-//                 }
-//                 .name{
-//                     font-size: 18px;
-//                     font-weight: 600;
-//                     padding-top: 10px;
-//                 }
+//////////////CONTENT//////////////
 
-//                 .price{
-//                     color: $blue;
-//                     font-weight: 600;
-//                 }
-//             }
-//         }
-//     }
 
-//     .contentRow{
-//         margin-top: 20px;
-//         align-items: start;
+.contentWrapper{
+    background-color: $bg-color;
+    display: flex;
+    justify-content: center;
 
-//         .contentImage{
-//             max-width: 100%;
-//             text-align: center;
 
-//             .sideImage{
-//                 max-width: 100%;
-//             }
+    .contentSection{
+        padding: 150px 150px 0px 150px;
+        background-color: $bg-color;
+        max-width: 1500px;
 
-//         }
+        .headContainer{
+            align-items: flex-end;
 
-//         .contentText{
+                .filtersList{
+                    display: flex;
+                    justify-content:flex-end;
+                    list-style-type: none;
 
-//         }
-//     }
-// }
+                    .list{
+                        padding: 5px 10px 5px 10px;
+                        font-weight: 900;
+
+                    }
+
+                    .list:hover{
+                        background-color:black;
+                        color: $bg-color;
+                    }
+                }
+
+        }
+
+        .hr1{
+            @include border-style;
+            margin-left:0;
+        }
+
+        .hr2{
+            @include border-style;
+            margin-right:0;  //why doesn't this work?
+        }
+
+
+
+        .rollout{
+            -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+            transition: width 1s  ease-out;
+            width : 0%;
+            text-align: right;
+        }
+
+        .grow{
+            width:100%;
+          }
+
+        .alignRight{
+            text-align: right;
+        }
+
+        .productsRow{
+
+
+            .productCol{
+                padding-bottom: 60px;
+                .imgClass{
+                    //max-width: 205px;
+                    max-width: 100%;
+                }
+                .name{
+                    font-size: 18px;
+                    font-weight: 600;
+                    padding-top: 10px;
+                }
+
+                .price{
+                    color: $blue;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .contentRow{
+        margin-top: 20px;
+        align-items: start;
+
+        .contentImage{
+            max-width: 100%;
+            text-align: center;
+
+            .sideImage{
+                max-width: 100%;
+            }
+
+        }
+
+
+    }
+}
 
 // ///CELLPHONE
 // @media screen  and (max-width:500px){
