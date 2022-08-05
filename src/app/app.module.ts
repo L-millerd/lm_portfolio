@@ -20,6 +20,11 @@ import { CakeryNavComponent } from './cakery/cakery-nav/cakery-nav.component';
 import { CakeryFooterComponent } from './cakery/cakery-footer/cakery-footer.component';
 import { CakeryProductsComponent } from './cakery/cakery-products/cakery-products.component';
 import { OrderComponent } from './cakery/order/order.component';
+import { BNavComponent } from './proj-butter/b-nav/b-nav.component';
+import { ProductDetailsComponent } from './proj-butter/product-details/product-details.component';
+import { AdminEditComponent } from './proj-butter/admin-edit/admin-edit.component';
+import { AdminViewComponent } from './proj-butter/admin-view/admin-view.component';
+import { BHomeComponent } from './proj-butter/b-home/b-home.component';
 
 
 @NgModule({
@@ -38,6 +43,11 @@ import { OrderComponent } from './cakery/order/order.component';
     CakeryFooterComponent,
     CakeryProductsComponent,
     OrderComponent,
+    BNavComponent,
+    ProductDetailsComponent,
+    AdminEditComponent,
+    AdminViewComponent,
+    BHomeComponent,
   ],
   imports: [
     BrowserModule,

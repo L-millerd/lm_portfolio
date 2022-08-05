@@ -38,8 +38,8 @@ export class HomeComponent implements OnInit {
     gsap.registerPlugin(ScrollTrigger);
     //hero section enter
     gsap.from('.heroContent', {yPercent: -20, opacity: 0, duration: 2, ease: "power2.inOut"});
-
   }
+
 
 
 }

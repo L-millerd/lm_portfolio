@@ -1,0 +1,15 @@
+@forward "red";
+
+$red: #a41a1a;
+$blue: #0069ad;
+$bg-color: #faf6ea;
+$yellow: #eab127;
+
+@mixin hover-transition{
+    transition: 0.3s;
+}
+
+@mixin border-style{
+    border: 2px solid black;
+    opacity: 1;
+}

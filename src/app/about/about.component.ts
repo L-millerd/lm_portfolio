@@ -18,7 +18,10 @@ export class AboutComponent implements OnInit {
     this.initScrollTriggers();
   }
 
+
+
   initScrollTriggers(){
+    gsap.registerPlugin(ScrollTrigger);
     gsap.from(this.about, {
       scrollTrigger: {trigger: this.about, start: '-150 center'},
       x:500,

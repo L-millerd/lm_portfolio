@@ -19,4 +19,5 @@ export class CommonService {
   getProjects(){
     return this.http.get<Projects>(this.url + '/api/projects/?populate=deep,2');
   }
+
 }
