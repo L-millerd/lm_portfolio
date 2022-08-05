@@ -1,291 +1,291 @@
-$red: #a41a1a;
-$blue: #0069ad;
-$bg-color: #faf6ea;
-$yellow: #eab127;
-
-@mixin hover-transition{
-    transition: 0.3s;
-}
-
-@mixin border-style{
-    border: 2px solid black;
-    opacity: 1;
-}
-
-h1{
-  font-weight:900;
-  font-size: 2.5rem
-}
-
-p {
-  font-size: 20px;
-  line-height: 1.75em;
-}
-
-.reg-button{
-  background-color:black;
-  border-radius: 8px;
-  border: none;
-  color: $bg-color;
-  line-height: 1.5;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 18px;
-  font-weight:400;
-  padding:10px 20px 10px 20px;
-  @include hover-transition();
-
-}
-.reg-button:hover{
-  color: #726f68;
-}
-
-
-/////////////BANNER
+// $red: #a41a1a;
+// $blue: #0069ad;
+// $bg-color: #faf6ea;
+// $yellow: #eab127;
+
+// @mixin hover-transition{
+//     transition: 0.3s;
+// }
+
+// @mixin border-style{
+//     border: 2px solid black;
+//     opacity: 1;
+// }
+
+// h1{
+//   font-weight:900;
+//   font-size: 2.5rem
+// }
+
+// p {
+//   font-size: 20px;
+//   line-height: 1.75em;
+// }
+
+// .reg-button{
+//   background-color:black;
+//   border-radius: 8px;
+//   border: none;
+//   color: $bg-color;
+//   line-height: 1.5;
+//   text-align: center;
+//   vertical-align: middle;
+//   font-size: 18px;
+//   font-weight:400;
+//   padding:10px 20px 10px 20px;
+//   @include hover-transition();
+
+// }
+// .reg-button:hover{
+//   color: #726f68;
+// }
+
+
+// /////////////BANNER
 
-.productsWrapper{
-  padding: 0;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #faf6ea;
-  max-width: 100%
-}
-
-.bannerWrapper{
-    background-color: $yellow;
-
-    .bannerLeftBox{
-        background-image: url('../../../assets/cakery-assets/products_banner.jpg');
-        background-size:cover;
-        border-top-right-radius:500px;
-        border-bottom-right-radius:500px;
-        background-attachment: bottom center;
-        //margin:30px 0px 20px 0px;
-        margin-top:20px;
-        margin-bottom:20px;
-        min-height:50vh;
-    }
-
-    .bannerTextBox{
-        background-color:$bg-color;
-        text-align: right;
-        display:flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-       // padding: 50px 100px 50px 100px;
-
-
-
-
-        .bannerText{
-            font-weight: 900;
-            //font-size: 125px;
-            line-height: 110%;
-            padding-bottom:20px
-        }
-
-        .bannerLine{
-
-            background-color: $red;
-
-        }
-    }
-}
-
-
-//////////////CONTENT//////////////
-
-
-.contentWrapper{
-    background-color: $bg-color;
-    display: flex;
-    justify-content: center;
+// .productsWrapper{
+//   padding: 0;
+//   margin: 0;
+//   font-family: 'Roboto', sans-serif;
+//   background-color: #faf6ea;
+//   max-width: 100%
+// }
+
+// .bannerWrapper{
+//     background-color: $yellow;
+
+//     .bannerLeftBox{
+//         background-image: url('../../../assets/cakery-assets/products_banner.jpg');
+//         background-size:cover;
+//         border-top-right-radius:500px;
+//         border-bottom-right-radius:500px;
+//         background-attachment: bottom center;
+//         //margin:30px 0px 20px 0px;
+//         margin-top:20px;
+//         margin-bottom:20px;
+//         min-height:50vh;
+//     }
+
+//     .bannerTextBox{
+//         background-color:$bg-color;
+//         text-align: right;
+//         display:flex;
+//         flex-direction: column;
+//         align-items: flex-end;
+//         justify-content: flex-end;
+//        // padding: 50px 100px 50px 100px;
+
+
+
+
+//         .bannerText{
+//             font-weight: 900;
+//             //font-size: 125px;
+//             line-height: 110%;
+//             padding-bottom:20px
+//         }
+
+//         .bannerLine{
+
+//             background-color: $red;
+
+//         }
+//     }
+// }
+
+
+// //////////////CONTENT//////////////
+
+
+// .contentWrapper{
+//     background-color: $bg-color;
+//     display: flex;
+//     justify-content: center;
 
 
-    .contentSection{
-        padding: 150px 150px 0px 150px;
-        background-color: $bg-color;
-        max-width: 1500px;
+//     .contentSection{
+//         padding: 150px 150px 0px 150px;
+//         background-color: $bg-color;
+//         max-width: 1500px;
 
-        .headContainer{
-            align-items: flex-end;
+//         .headContainer{
+//             align-items: flex-end;
 
-                .filtersList{
-                    display: flex;
-                    justify-content:flex-end;
-                    list-style-type: none;
+//                 .filtersList{
+//                     display: flex;
+//                     justify-content:flex-end;
+//                     list-style-type: none;
 
-                    .list{
-                        padding: 5px 10px 5px 10px;
-                        font-weight: 900;
+//                     .list{
+//                         padding: 5px 10px 5px 10px;
+//                         font-weight: 900;
 
-                    }
+//                     }
 
-                    .list:hover{
-                        background-color:black;
-                        color: $bg-color;
-                    }
-                }
+//                     .list:hover{
+//                         background-color:black;
+//                         color: $bg-color;
+//                     }
+//                 }
 
-        }
+//         }
 
-        .hr1{
-            @include border-style;
-            margin-left:0;
-        }
+//         .hr1{
+//             @include border-style;
+//             margin-left:0;
+//         }
 
-        .hr2{
-            @include border-style;
-            margin-right:0;  //why doesn't this work?
-        }
+//         .hr2{
+//             @include border-style;
+//             margin-right:0;  //why doesn't this work?
+//         }
 
 
 
-        .rollout{
-            -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
-            transition: width 1s  ease-out;
-            width : 0%;
-            text-align: right;
-        }
+//         .rollout{
+//             -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+//             transition: width 1s  ease-out;
+//             width : 0%;
+//             text-align: right;
+//         }
 
-        .grow{
-            width:100%;
-          }
+//         .grow{
+//             width:100%;
+//           }
 
-        .alignRight{
-            text-align: right;
-        }
+//         .alignRight{
+//             text-align: right;
+//         }
 
-        .productsRow{
+//         .productsRow{
 
 
-            .productCol{
-                padding-bottom: 60px;
-                .imgClass{
-                    //max-width: 205px;
-                    max-width: 100%;
-                }
-                .name{
-                    font-size: 18px;
-                    font-weight: 600;
-                    padding-top: 10px;
-                }
+//             .productCol{
+//                 padding-bottom: 60px;
+//                 .imgClass{
+//                     //max-width: 205px;
+//                     max-width: 100%;
+//                 }
+//                 .name{
+//                     font-size: 18px;
+//                     font-weight: 600;
+//                     padding-top: 10px;
+//                 }
 
-                .price{
-                    color: $blue;
-                    font-weight: 600;
-                }
-            }
-        }
-    }
+//                 .price{
+//                     color: $blue;
+//                     font-weight: 600;
+//                 }
+//             }
+//         }
+//     }
 
-    .contentRow{
-        margin-top: 20px;
-        align-items: start;
+//     .contentRow{
+//         margin-top: 20px;
+//         align-items: start;
 
-        .contentImage{
-            max-width: 100%;
-            text-align: center;
+//         .contentImage{
+//             max-width: 100%;
+//             text-align: center;
 
-            .sideImage{
-                max-width: 100%;
-            }
+//             .sideImage{
+//                 max-width: 100%;
+//             }
 
-        }
+//         }
 
-        .contentText{
+//         .contentText{
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
-///CELLPHONE
-@media screen  and (max-width:500px){
+// ///CELLPHONE
+// @media screen  and (max-width:500px){
 
-    .bannerTextBox{
+//     .bannerTextBox{
 
-        padding: 50px 70px 50px 70px;
-    }
+//         padding: 50px 70px 50px 70px;
+//     }
 
-    .bannerText{
-        font-size: 75px;
-        text-align: right;
-    }
+//     .bannerText{
+//         font-size: 75px;
+//         text-align: right;
+//     }
 
-    .bannerLine{
-        width:240px;
-        height:30px;
+//     .bannerLine{
+//         width:240px;
+//         height:30px;
 
-    }
+//     }
 
-    .contentSection{
-        padding: 50px 50px 0px 50px;
-    }
+//     .contentSection{
+//         padding: 50px 50px 0px 50px;
+//     }
 
-    h1{
-        padding-top:20px
-    }
+//     h1{
+//         padding-top:20px
+//     }
 
-    .rowReverse{
-        flex-direction: column-reverse;
-    }
+//     .rowReverse{
+//         flex-direction: column-reverse;
+//     }
 
-}
+// }
 
-////IPAD
-@media screen and (min-width: 500px) and (max-width:1050px){
-    .bannerTextBox{
+// ////IPAD
+// @media screen and (min-width: 500px) and (max-width:1050px){
+//     .bannerTextBox{
 
-        padding: 50px 175px 50px 120px;
-    }
+//         padding: 50px 175px 50px 120px;
+//     }
 
-    .bannerText{
-        font-size: 125px;
+//     .bannerText{
+//         font-size: 125px;
 
-    }
+//     }
 
-    .bannerLine{
-        width:240px;
-        height:30px;
+//     .bannerLine{
+//         width:240px;
+//         height:30px;
 
-    }
+//     }
 
-    .contentSection{
-        padding: 50px 50px 0px 50px;
-    }
+//     .contentSection{
+//         padding: 50px 50px 0px 50px;
+//     }
 
-    h1{
-        padding-top:20px
-    }
+//     h1{
+//         padding-top:20px
+//     }
 
-    .contentRow{
-        align-items: start;
-    }
+//     .contentRow{
+//         align-items: start;
+//     }
 
 
-}
+// }
 
-/////FULL SCREEN
-@media screen and (min-width: 1050px){
-    .bannerTextBox{
+// /////FULL SCREEN
+// @media screen and (min-width: 1050px){
+//     .bannerTextBox{
 
-        padding: 50px 100px 50px 100px;
-    }
+//         padding: 50px 100px 50px 100px;
+//     }
 
-    .bannerText{
-        font-size: 125px;
-    }
+//     .bannerText{
+//         font-size: 125px;
+//     }
 
-    .bannerLine{
-        width:340px;
-        height:40px;
+//     .bannerLine{
+//         width:340px;
+//         height:40px;
 
-    }
+//     }
 
-    .contentWrapper{
-        .contentSection{
-            padding: 150px 150px 0px 150px;
-        }
-    }
-}
+//     .contentWrapper{
+//         .contentSection{
+//             padding: 150px 150px 0px 150px;
+//         }
+//     }
+// }

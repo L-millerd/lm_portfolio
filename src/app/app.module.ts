@@ -15,11 +15,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { CakeryHomeComponent } from './cakery/cakery-home/cakery-home.component';
-import { CakeryAboutComponent } from './cakery/cakery-about/cakery-about.component';
 import { CakeryNavComponent } from './cakery/cakery-nav/cakery-nav.component';
 import { CakeryFooterComponent } from './cakery/cakery-footer/cakery-footer.component';
 import { CakeryProductsComponent } from './cakery/cakery-products/cakery-products.component';
-import { OrderComponent } from './cakery/order/order.component';
 import { BNavComponent } from './proj-butter/b-nav/b-nav.component';
 import { ProductDetailsComponent } from './proj-butter/product-details/product-details.component';
 import { AdminEditComponent } from './proj-butter/admin-edit/admin-edit.component';
@@ -38,11 +36,9 @@ import { BHomeComponent } from './proj-butter/b-home/b-home.component';
     TestComponent,
     SingleProjectComponent,
     CakeryHomeComponent,
-    CakeryAboutComponent,
     CakeryNavComponent,
     CakeryFooterComponent,
     CakeryProductsComponent,
-    OrderComponent,
     BNavComponent,
     ProductDetailsComponent,
     AdminEditComponent,

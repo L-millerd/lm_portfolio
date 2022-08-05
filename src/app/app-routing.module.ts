@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { CakeryHomeComponent } from './cakery/cakery-home/cakery-home.component';
 import { CakeryProductsComponent } from './cakery/cakery-products/cakery-products.component';
-import { OrderComponent } from './cakery/order/order.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
 
   {path: 'projects/the-cakery', component: CakeryHomeComponent},
   {path: 'projects/the-cakery/products', component: CakeryProductsComponent},
-  {path: 'projects/the-cakery/order', component: OrderComponent},
 
   {path: 'projects/butter-snowboards', component: BHomeComponent},
   {path: 'projects/butter-snowboards/:id', component: ProductDetailsComponent},
