@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { gsap } from 'gsap/all';
-import { ScrollTrigger } from 'gsap/all';
+// import { gsap } from 'gsap/all';
+// import { ScrollTrigger } from 'gsap/all';
 
 @Component({
   selector: 'app-about',

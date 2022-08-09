@@ -22,8 +22,8 @@ const routes: Routes = [
   {path: 'projects/the-cakery', component: CakeryHomeComponent},
   {path: 'projects/the-cakery/products', component: CakeryProductsComponent},
 
-  {path: 'projects/butter-snowboards', component: BHomeComponent},
-  {path: 'projects/butter-snowboards/:id', component: ProductDetailsComponent},
+  {path: 'projects/butter-snowboards/products', component: BHomeComponent},
+  {path: 'projects/butter-snowboards/products/:id', component: ProductDetailsComponent},
   {path: 'projects/butter-snowboards/admin-edit/:id', component: AdminEditComponent},
   {path: 'projects/butter-snowboards/admin-view', component: AdminViewComponent}
 ];

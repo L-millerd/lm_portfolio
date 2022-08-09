@@ -4,14 +4,13 @@
   <div class="projectsContent">
     <h2><i class="fa-solid fa-gear"></i> Projects</h2>
     <hr>
-    <div class="buttonsRow"></div>
-
     <section class="projectList" >
 
       <div class="projectCardWrapper" *ngFor="let project of projects;" >
         <div class="projectCard row">
-          <div class="cardInfo col-8">
+          <div class="cardInfo col-sm-12 col-md-12 col-lg-8 ">
             <h3>{{project.attributes.Title}}</h3>
+            <!-- <h4 class="subtitle">{{project.attributes.Subtitle}}</h4> -->
 
             <ul class="skills">
               <li *ngFor="let skill of project.attributes.skills.data">{{skill.attributes.SkillName}}</li>
@@ -19,20 +18,19 @@
 
             <p>{{project.attributes.Summary}}</p>
             <div class="linksRow">
-              <a [href]="project.attributes.WebLink"><button class="btn buttonClass">View</button></a>
+              <a [href]="project.attributes.WebLink" target="_blank"><button class="btn buttonClass">View</button></a>
               <a [href]="project.attributes.GitLink"><i class="socialIcon fa-xl fa-brands fa-github"></i></a>
             </div>
           </div>
-<!--needs to be updated with cloudinary-->
-          <!-- <div class="cardImage col-4">
-            <img [src]="server + project.attributes.Image.data.attributes.url">
-          </div> -->
-<!--needs to be updated with cloudinary-->
+
+          <div class="cardImage col-sm-12 col-md-12 col-lg-4" style="background-image: url('{{project.attributes.imageLink}}');">
+          </div>
+
 
         </div>
       </div>
 
-      <div class="projectCardWrapper">
+      <!-- <div class="projectCardWrapper">
         <div class="projectCard row">
           <div class="cardInfo col-8">
             <h3>Two Tugs Brewing</h3>
@@ -96,7 +94,7 @@
           </div>
 
         </div>
-      </div>
+      </div> -->
     </section>
 
 

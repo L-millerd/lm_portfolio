@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../services/common.service';
 
-import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+// import { gsap } from 'gsap';
+// import ScrollTrigger from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-contact',
@@ -43,12 +44,12 @@ export class ContactComponent implements OnInit {
       scrollTrigger: {trigger: this.contactWrapper, start: '-150 center'},
       y:500,
       duration: 2,
-    })
+    });
   }
 
 
   ngOnInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
     this.initScrollTriggers();
   }
 

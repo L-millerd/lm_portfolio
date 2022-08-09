@@ -18,26 +18,28 @@ $dark-color2:#252935;
   overflow: hidden;
   background-size: cover;
   position: absolute;
-
 }
 
 .homeContainer{
   height: 90vh; ///This needs work
-  width: 100%;
+  // width: 100%;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 .heroSection{
-  width: 100%;
   position: absolute;
   z-index: 1;
+  padding: 40px;
 
 
   .heroContent{
-    padding: 200px;
+    // padding: 200px;
     // width: calc(70% + 10vh);
-    width: 70%;
+    max-width: 1000px;
 
 
     .intro{
@@ -74,8 +76,6 @@ $dark-color2:#252935;
       color:rgba(255,255,255,0);
       background-size: 200%;
       animation: shine 4s infinite;
-      text-align: justify;
-      text-justify: inter-word;
       font-size: .8rem;
     }
 
@@ -99,7 +99,7 @@ $dark-color2:#252935;
   border-radius: 0px 20px 20px 0px;
   font-size: 2rem;
   font-weight: 700;
-  padding: 20px;
+  padding: 15px 0px 15px 33px;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -107,7 +107,7 @@ $dark-color2:#252935;
 }
 
 .vertLine{
-  width: 2rem;
+  width: 2.6rem;
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -152,4 +152,33 @@ $dark-color2:#252935;
     background-position: -100%;
   }
 }
+
+//Media Queries
+
+@media screen and (max-width:500px){
+
+  .vertLine{
+    display: none;
+  }
+  .number{
+    display:none;
+  }
+}
+
+////IPAD
+@media screen and (min-width: 500px) and (max-width:1050px){
+  .vertLine{
+    display: none;
+  }
+  .number{
+    display:none;
+  }
+}
+/////FULL SCREEN
+@media screen and (min-width: 1050px){
+
+
+}
+
+
 
