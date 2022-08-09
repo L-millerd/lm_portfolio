@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../interfaces/butter-interface';
 import { Login } from '../interfaces/butter-interface';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,8 @@ import { Login } from '../interfaces/butter-interface';
 export class ButterService {
 
   constructor(private http: HttpClient) { }
+
+  server = environment.server;
 
   private url = "https://starfish-app-m7u82.ondigitalocean.app/womens";
   private loginURL = "https://starfish-app-m7u82.ondigitalocean.app/login";

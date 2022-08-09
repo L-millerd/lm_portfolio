@@ -18,7 +18,7 @@
 
             <p>{{project.attributes.Summary}}</p>
             <div class="linksRow">
-              <a [href]="project.attributes.WebLink" target="_blank"><button class="btn buttonClass">View</button></a>
+              <a [routerLink]="project.attributes.WebLink" target="_blank"><button class="btn buttonClass">View</button></a>
               <a [href]="project.attributes.GitLink"><i class="socialIcon fa-xl fa-brands fa-github"></i></a>
             </div>
           </div>
