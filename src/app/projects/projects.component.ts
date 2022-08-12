@@ -29,7 +29,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   initScrollTriggers() {
-    document.querySelectorAll(".projectCardWrapper").forEach(card =>{
+    document.querySelectorAll(".projectCardWrapper").forEach((card, i) =>{
       const scrollBox = gsap.timeline({
         scrollTrigger:{
           trigger: card,
@@ -41,7 +41,8 @@ export class ProjectsComponent implements OnInit {
         duration: 2,
         opacity: 0,
         x:-200,
-        stagger: 0.5,
+        // stagger: 0.5,
+        delay: i * 0.2
       })
     })
   }

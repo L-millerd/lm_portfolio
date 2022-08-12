@@ -11,9 +11,9 @@ export class ButterService {
 
   constructor(private http: HttpClient) { }
 
-  server = environment.server;
+  server = "https://starfish-app-m7u82.ondigitalocean.app";
 
-  private url = "https://starfish-app-m7u82.ondigitalocean.app/womens";
+  private url = this.server + "/womens";
   private loginURL = "https://starfish-app-m7u82.ondigitalocean.app/login";
   private viewURL = "https://starfish-app-m7u82.ondigitalocean.app/admin-view";
   private addURL = "https://starfish-app-m7u82.ondigitalocean.app/admin-add";
@@ -23,7 +23,9 @@ export class ButterService {
   private toggleURL = "https://starfish-app-m7u82.ondigitalocean.app/admin-toggle";
 
   getAllProducts(){
-    return this.http.get<Product[]>(this.url);
+    return this.http.get<any>(this.url);
+    // return this.http.get<Product[]>(this.url);
+
   }
 
   getProductById(id:number){
