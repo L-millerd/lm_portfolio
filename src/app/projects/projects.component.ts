@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 export class ProjectsComponent implements OnInit {
 
   projects:any[] = [];
+  projects2:any[] = [];
   server = environment.server;
 
   constructor(private cs: CommonService) { }
@@ -18,14 +19,13 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.cs.getProjects().subscribe( res =>{
       this.projects = res.data;
-      console.log(this.projects)
+      // console.log(this.projects)
     })
 
   }
 
   ngAfterViewInit(){
-    this.initScrollTriggers();
-    //works but not on forloop
+    // this.initScrollTriggers();
   }
 
   initScrollTriggers() {

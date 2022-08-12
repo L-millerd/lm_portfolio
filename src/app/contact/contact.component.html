@@ -1,15 +1,35 @@
 <div class="contactWrapper">
 <main class="contactContainer">
-  <div class="contactContent">
-    <!-- <i class="icon fa-regular fa-paper-plane"></i> -->
-    <h2><i class="fa-solid fa-paper-plane"></i> Let's Connect</h2>
+    <h2><i class="fa fa-solid fa-link" aria-hidden="true"></i> Let's Connect</h2>
    <hr>
+
+   <div class="intro">
+      <div>
+        <p>I'd love to chat more with you about any projects you're working on or roles
+        you are looking to fill. Here are some ways you can reach me!</p>
+      </div>
+      <div class="contactLinks">
+        <p><a href = "mailto: lisa.millerd@gmail.com" target="_blank">
+          <i class="fa fa-envelope" aria-hidden="true"></i>lisa.millerd@gmail.com
+        </a></p>
+        <p><a href="https://asset.cloudinary.com/l-millerd/3e8e0d68c1109e3c89d35c2e0b79c014" download target="_blank">
+          <i class="fa fa-cloud-download" aria-hidden="true"></i>Resume
+        </a></p>
+        <p><a href="https://github.com/L-millerd" target="_blank">
+          <i class="fa fa-github" aria-hidden="true"></i>L-Millerd
+        </a></p>
+        <p><a href="https://www.linkedin.com/in/lisa-millerd-3905ba67/" target="_blank">
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>Lisa Millerd
+        </a></p>
+      </div>
+    </div>
 
     <section class="formContainer">
       <form #form_="ngForm" (ngSubmit)="submit()">
       <div class="form">
+        <div class="hello"><i class="fa-solid fa-paper-plane"></i> Send Me An Email</div>
         <div class="form-group row">
-          <div class="col">
+          <div class="col-sm-12 col-md-12 col-lg-6">
             <label for="inputFirstName">Full Name</label>
             <input
               name ="inputName"
@@ -23,7 +43,7 @@
               <div class="alert" role="alert" *ngIf="name_.touched && name_.invalid">Please enter your name</div>
           </div>
 
-          <div class="col">
+          <div class="col-sm-12 col-md-12 col-lg-6">
             <label for="inputLastName">Email</label>
             <input
               name="email"
@@ -74,8 +94,9 @@
         </div>
       </div>
     </form>
+
+
     </section>
 
-  </div>
 </main>
 </div>

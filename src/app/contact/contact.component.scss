@@ -3,7 +3,7 @@ $accent-color: rgb(127, 205, 199);
 $light-color: #BDC6D7;
 $dim-color: #7c828c;
 $dark-teal: #24313a;
-$teal: #0f505f;
+$teal: #598c88;
 $dark-color2:#252935;
 
 // $teal: #125e70;
@@ -14,59 +14,78 @@ $dark-color2:#252935;
 }
 
 .contactContainer{
-  display: flex;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
+  margin: auto;
+}
+
+.intro{
+ width:95%;
+ margin: auto;
+}
+
+.contactLinks{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+  p{
+    color: $dim-color
+  }
+  .fa{
+    color: $dim-color;
+    padding-right: 15px;
+    font-size: 1.2rem;
+  }
+  .fa:active{
+    color:$light-color;
+  }
+  a{
+    text-decoration: none;
+    color: $dim-color
+  }
+  a:hover{
+    color: $light-color;
+  }
 
 }
 
-
-.contactContent{
-  padding: 150px 200px 150px 200px; ////change for responsive
-  width: 90%;
-  border-radius: 40px 40px 0px 0px;
-  background-color: $dark-color2;
-  @include sectionShadow();
-}
-
-label{
-  color: $light-color;
-  font-size: 0.8rem;
-}
-
-////////////////////////
 .formContainer{
-  padding-top: 75px;
+  padding-top: 50px;
   padding-bottom: 75px;
+  font-family: 'Poppins', sans-serif;
+  .hello{
+    color:$light-color;
+    font-weight:500;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+  }
 }
-///////////////////////
+
 
 .form{
-  // border: 2px solid $accent-color;
-  background-color: $dark-color;
-  padding: 80px;
+  background-color: $dark-color2;
+  border-radius: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: .5rem;
-  border-radius: 20px;
 
   input, textarea{
-    background: $dark-color2;
-    // background: transparent;
-    // border-radius: none !important;
+    background: $dark-color;
     border: none;
     color: $light-color;
   }
 
   .alert{
     font-size: 0.75rem;
-    color: $accent-color;
+    color: $teal;
     margin: 0;
     padding: 2px;
   }
 
+  label{
+    color: $dim-color;
+    font-size: 0.8rem;
 
+  }
   input:focus, textarea:focus{
     // border: 1px solid $accent-color;
     // box-shadow:  0 0 0 0.2rem rgba(127, 205, 199, 0.4);
@@ -112,7 +131,53 @@ label{
   transform: scale(1.03);
 }
 
-.icon{
-  color: $accent-color;
+.fa-solid{
+  color:$dim-color
+}
+
+
+////media querries
+@media screen and (max-width:500px){
+
+  .contactContainer{
+    max-width: 70%;
+  }
+
+  .form{
+    padding: 30px;
+  }
+
+  .contactWrapper{
+    padding-top: 100px;
+  }
+
+}
+
+////IPAD
+@media screen and (min-width: 500px) and (max-width:1050px){
+  .contactContainer{
+    max-width: 70%;
+  }
+
+  .form{
+    padding: 80px;
+  }
+
+  .contactWrapper{
+    padding-top: 100px;
+  }
+
+}
+/////FULL SCREEN
+@media screen and (min-width: 1050px){
+
+  .contactContainer{
+    max-width: 70%;
+  }
+
+  .form{
+    padding: 80px;
+  }
+
 }
 
