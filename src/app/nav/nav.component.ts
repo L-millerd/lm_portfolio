@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { gsap } from 'gsap';
 import { ViewportScroller } from '@angular/common';
 
@@ -13,14 +13,16 @@ export class NavComponent implements OnInit {
   constructor(private vs: ViewportScroller) { }
 
   scrollAbout(){
-    this.vs.scrollToAnchor('one')
+    this.vs.scrollToAnchor('about')
   }
+  //change back to about?
   scrollProjects(){
-    this.vs.scrollToAnchor('two');
+    this.vs.scrollToAnchor('projects');
   }
   scrollContact(){
-    this.vs.scrollToAnchor('three');
+    this.vs.scrollToAnchor('contact');
   }
+
 
 
   ngOnInit(): void {

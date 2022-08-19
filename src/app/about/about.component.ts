@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
 
   constructor() { }
 
-  about = '.aboutContainer';
+  about = '.aboutSection';
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
@@ -23,7 +23,7 @@ export class AboutComponent implements OnInit {
   initScrollTriggers(){
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(this.about, {
-      scrollTrigger: {trigger: this.about, start: '-150 center'},
+      scrollTrigger: {trigger: this.about},
       x:500,
       duration: 2,
     })

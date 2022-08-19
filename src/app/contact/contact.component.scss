@@ -1,17 +1,7 @@
-$dark-color: #141A29;
-$accent-color: rgb(127, 205, 199);
-$light-color: #BDC6D7;
-$dim-color: #7c828c;
-$dark-teal: #24313a;
-$teal: #598c88;
-$dark-color2:#252935;
 
-// $teal: #125e70;
 
-@mixin sectionShadow{
-  -webkit-box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
-  box-shadow: 0px 5px 22px 4px rgba(0,0,0,0.2);
-}
+@import '../../styles.scss';
+
 
 .contactContainer{
   margin: auto;
@@ -26,36 +16,37 @@ $dark-color2:#252935;
  display: flex;
  flex-wrap: wrap;
  justify-content: space-between;
-  p{
-    color: $dim-color
-  }
+
   .fa{
-    color: $dim-color;
     padding-right: 15px;
     font-size: 1.2rem;
   }
-  .fa:active{
-    color:$light-color;
-  }
+
   a{
     text-decoration: none;
-    color: $dim-color
+    color: $teal;
+    @include transition();
   }
   a:hover{
-    color: $light-color;
+    color: $accent-color;
   }
+
+
 
 }
 
 .formContainer{
-  padding-top: 50px;
+  padding-top: 15px;
   padding-bottom: 75px;
   font-family: 'Poppins', sans-serif;
   .hello{
     color:$light-color;
     font-weight:500;
     font-size: 1.2rem;
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
+  }
+  hr{
+    margin-top: 0px;
   }
 }
 
@@ -131,6 +122,11 @@ $dark-color2:#252935;
   transform: scale(1.03);
 }
 
+
+.btn:focus{
+  box-shadow: none !important;
+}
+
 .fa-solid{
   color:$dim-color
 }
@@ -151,6 +147,9 @@ $dark-color2:#252935;
     padding-top: 100px;
   }
 
+  .contactLinks{
+    display: block;
+  }
 }
 
 ////IPAD
