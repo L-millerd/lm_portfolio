@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../services/common.service';
 
-// import { gsap } from 'gsap';
-// import ScrollTrigger from 'gsap/ScrollTrigger';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,11 +48,9 @@ export class ContactComponent implements OnInit {
 
 
   ngOnInit(): void {
-    // gsap.registerPlugin(ScrollTrigger);
     this.initScrollTriggers();
+
   }
-
-
 
 
 }
